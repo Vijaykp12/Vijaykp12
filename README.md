@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @Vijaykp12
 - 👀 I’m interested in exploring new things especially related to games
-- 🌱 I’m currently learning Java and Data Structures 
+- 🌱 I’m currently learning React
 - 💞️ I’m looking to collaborate on some projects to improve
-- 📫 Reach me through readylifeperfectly12@gmail.com
+- 📫 Reach me through vijaykp1210@gmail.com
 
 
 <!---
