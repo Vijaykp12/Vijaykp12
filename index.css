@@ -1,0 +1,408 @@
+body{
+  background-color: hsl(180, 100%, 96%);
+}
+
+.Main{
+  display: flex;
+  flex-direction: row;
+}
+
+.Blur{
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.132); /* translucent black */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Sidebar{
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+  height: 99vh;
+  background-color:hsl(180, 100%, 80%);
+  border-color: black;
+  border: 2px solid;
+  border-radius: 35px;
+}
+
+.Side-bg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  border-color: blue;
+  
+}
+
+.Side-bg .Activity, .Completed, .Pending, .Progress{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  width:200px;
+  background-color: hsl(180, 100%, 80%);
+  margin: 5px;
+  height:40px;
+  border:none;
+  transition: background-color 0.5s ease;
+}
+
+.Side-bg .Progress{
+  margin-top: 300px;
+}
+
+.Side-bg button:hover{
+  background-color: hsl(180, 100%, 50%);;
+}
+
+.Main-container{
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+  width:1200px;
+  border-radius: 25px;
+}
+.Main-container .OrdList{
+  padding-left: 0;
+  list-style: none;
+}
+
+.Main-container .List{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin:5px;
+  width:970px;
+  height: 75px;
+  border-radius: 10px;
+  background-color:#1b906932;
+}
+
+.Main-container .Done{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height:55px;
+  width:95px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px;
+  background-color: #1b906911;
+  border-color: #1b906914;
+  border-radius: 5px;
+}
+
+.Main-container .CompletedSpan{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1rem;
+
+}
+
+.Main-container .Done:hover{
+  background-color: hsla(160, 100%, 75%, 0.493);
+}
+
+.Main-container .Add{
+  width:35px;
+  height:35px;
+  position:absolute;
+  top:500px;
+  left:1150px;
+  background-color: #7fffd456;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  border:1px solid #00000024;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.Main-container .Add:hover{
+  background-color: #19c18956;
+}
+
+
+/* 
+Stopwatch
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsla(0, 0%, 50%, 0.235);
+}
+
+.StopWatch{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid;
+  border-radius: 50px;
+  background-color: white;
+  padding: 30px;
+}
+
+.display{
+  font-size: 5rem;
+  font-family: monospace;
+  font-weight: bold;
+  color:hsl(0, 0%, 50%);
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 25px;
+}
+
+.controls button{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 5px;
+  min-width:125px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+.Start{
+  background-color: green;
+}
+
+.Start:hover{
+  background-color: greenyellow;
+}
+
+.Stop{
+  background-color: red;
+}
+
+.Stop:hover{
+  background-color: hsl(0, 88%, 70%);
+}
+
+.Reset{
+  background-color: rgb(26, 0, 128);
+}
+
+.Reset:hover{
+  background-color: hsl(249, 100%, 59%);
+} */
+
+
+
+/* .box{
+  border: 3px solid;
+  padding:25px;
+
+} */
+
+/*
+TODO
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.color-container{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+h1{
+  margin:50px;
+  font-size: 3rem;
+}
+
+.color-display{
+  width:300px;
+  height:300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid hsl(0, 0%, 80%);
+  border-radius: 25px;
+  margin-bottom: 25px;
+  transition: 0.25s ease;
+}
+
+.color-display p{
+  color: hsl(0, 0%, 20%);
+  font-size: 2rem;
+  text-align: center;
+}
+
+label{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="color"]{
+  width:75px;
+  height:50px;
+  padding:5px;
+  border-radius: 15px;
+  border: 3px solid hsl(0, 0%, 80%);
+} */
+
+
+/* .Container{
+  border:3px solid;
+  padding:20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.Count{
+  font-size: 5em;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 50px;
+}
+
+.Inc{
+  margin-left :10px;
+  margin-right: 15px;
+  background-color: beige;
+  color: blue;
+  border-radius: 10px;
+  height:50px;
+  width:100px;
+  font-size: medium;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Dec{
+  margin-left :10px;
+  margin-right: 15px;
+  background-color: beige;
+  color: blue;
+  border-radius: 10px;
+  height:50px;
+  width:100px;
+  font-size: medium;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.Res{
+  margin-left :10px;
+  margin-right: 15px;
+  background-color: beige;
+  color: blue;
+  border-radius: 10px;
+  height:50px;
+  width:100px;
+  font-size: medium;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+
+
+
+/* .Category{
+  font-size: 2.5em;
+  font-weight: bold;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 3px solid;
+  text-align: center;
+  background-color: aqua;
+}
+
+
+.List li{
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  margin:0;
+}
+
+.List li:hover{
+  color:antiquewhite;
+  cursor:pointer;
+} */
+
+/* .h21{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2em;
+  background-color: lightgreen;
+  color: white;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.h22{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2em;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  margin: 0;
+} */
+
+
+/* .Student{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  padding: 10px;
+  border: 1px solid black
+}
+
+.Student p{
+  margin: 0;
+} */
+
+/* 
+Card Code
+
+
+.card{
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(84, 83, 83, 0.068);
+  padding:20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+}
+
+.card .card-image{
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card .Title{
+  font-family: Arial,sans-serif;
+  margin: 0;
+  color: hsl(0, 0%, 20%);
+}
+
+.card .Text{
+  font-family: Arial, Helvetica, sans-serif;
+  color:hsl(0, 0%, 30%)
+} */
+
+
+/* 
+External
+
+.Button{
+  background-color: hsl(200, 100%, 50%);
+  color:white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+} */
+
